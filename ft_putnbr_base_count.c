@@ -1,0 +1,36 @@
+#include "ft_printf.h"
+
+int     ft_strlen(char *str)
+{
+    int i;
+
+    i = 0;
+    while (str[i])
+    {
+        i++;
+    }
+    return (i);
+}
+
+void    ft_putnbr_base_count(int nb, char *base, size_t *count)
+{
+    long    n;
+    int     size;
+
+    size = ft_strlen(base);
+    n = nb;
+    if (n < 0)
+    {
+        ft_putchar_count('-', count);
+        n = -n;
+    }
+    if (n > size - 1)
+    {
+        ft_putnbr_base_count(n / size, base, count);
+        ft_putnbr_base_count(n % size, base, count);
+    }
+    if (n <= size - 1)
+    {
+        ft_putchar_count(base[n], count);
+    }
+}
