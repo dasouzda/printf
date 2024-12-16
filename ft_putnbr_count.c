@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_count.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dasouzda <dasouzda@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/16 15:26:46 by dasouzda          #+#    #+#             */
+/*   Updated: 2024/12/16 15:43:05 by dasouzda         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-void	ft_putnbr_count(int n,size_t *count)
+void	ft_putnbr_count(int n, size_t *count)
 {
 	long	nb;
 
