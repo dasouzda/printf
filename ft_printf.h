@@ -6,7 +6,7 @@
 /*   By: dasouzda <dasouzda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 15:26:07 by dasouzda          #+#    #+#             */
-/*   Updated: 2024/12/16 15:29:51 by dasouzda         ###   ########.fr       */
+/*   Updated: 2024/12/16 16:39:27 by dasouzda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <unistd.h>
+# include <limits.h>
 
 int		ft_printf(const char *format, ...);
 void	ft_putchar_count(char c, size_t *count);
