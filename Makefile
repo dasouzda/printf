@@ -1,6 +1,19 @@
-NAME = ft_printf.a
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: dasouzda <dasouzda@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/12/16 14:25:02 by dasouzda          #+#    #+#              #
+#    Updated: 2024/12/16 14:28:16 by dasouzda         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-SRC = ft_printf.c ft_putchar_count.c
+NAME = libftprintf.a
+
+SRC = ft_printf.c ft_putchar_count.c ft_putnbr_count.c ft_putstr_count.c \
+ft_putnbr_base_count.c ft_putptr_count.c ft_putunsigned_count.c
 
 OBJ = $(SRC:.c=.o)
 
