@@ -6,7 +6,7 @@
 /*   By: dasouzda <dasouzda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 15:25:57 by dasouzda          #+#    #+#             */
-/*   Updated: 2024/12/16 16:40:04 by dasouzda         ###   ########.fr       */
+/*   Updated: 2025/01/02 13:08:34 by dasouzda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,30 +24,14 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-void	ft_putnbr_base_count(int nb, char *base, size_t *count)
+void	ft_putnbr_base_count(unsigned long nb, char *base, size_t *count)
 {
-	long	n;
-	int		size;
+	unsigned long	n;
+	unsigned long	size;
 
-	size = ft_strlen(base);
+	size = (unsigned long)ft_strlen(base);
 	n = nb;
-    if(n == INT_MIN)
-    {
-        ft_putstr_count("-2147483648", count);
-        return ;
-    }
-	if (n < 0)
-	{
-		ft_putchar_count('-', count);
-		n = -n;
-	}
-	if (n > size - 1)
-	{
+	if (n >= size)
 		ft_putnbr_base_count(n / size, base, count);
-		ft_putnbr_base_count(n % size, base, count);
-	}
-	if (n <= size - 1)
-	{
-		ft_putchar_count(base[n], count);
-	}
+	ft_putchar_count(base[n % size], count);
 }

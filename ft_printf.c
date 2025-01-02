@@ -6,7 +6,7 @@
 /*   By: dasouzda <dasouzda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 15:25:51 by dasouzda          #+#    #+#             */
-/*   Updated: 2024/12/16 15:25:52 by dasouzda         ###   ########.fr       */
+/*   Updated: 2025/01/02 13:02:20 by dasouzda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_printf(const char *format, ...)
 	size_t	count;
 
 	if (!format)
-		return (0);
+		return (-1);
 	count = 0;
 	va_start(arg, format);
 	while (*format)
