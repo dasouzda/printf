@@ -6,7 +6,7 @@
 #    By: dasouzda <dasouzda@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/16 14:25:02 by dasouzda          #+#    #+#              #
-#    Updated: 2024/12/16 14:28:16 by dasouzda         ###   ########.fr        #
+#    Updated: 2025/01/02 13:21:22 by dasouzda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ $(NAME): $(OBJ)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
+	
 clean:
 	rm -f $(OBJ)
 
@@ -40,4 +41,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re bonuscleanc
+.PHONY: all clean fclean re
